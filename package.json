@@ -1,0 +1,24 @@
+{
+  "name": "bell-website",
+  "version": "1.0.0",
+  "description": "Hapi application that showcases bell and various providers",
+  "main": "index.js",
+  "scripts": {
+    "test": "lab -dL",
+    "start": "node index.js",
+    "dev": "env $(cat .env | xargs) node index.js",
+    "deploy": "sed 's/^/-e /' .env | xargs now -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ldesplat/bell-website"
+  },
+  "private": true,
+  "license": "BSD-3-Clause",
+  "dependencies": {
+    "bell": "8.x.x",
+    "hapi": "15.x.x",
+    "hoek": "4.x.x",
+    "inert": "4.x.x"
+  }
+}
